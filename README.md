@@ -11,7 +11,7 @@ Give your autonomous agents "Dark Pool" capabilities with automatic x402 payment
 
 ---
 
-##   Start Start here frens
+##   Start here frens
 
 ```Start here
 pip install obscurate-client
