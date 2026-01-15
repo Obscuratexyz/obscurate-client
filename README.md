@@ -46,12 +46,12 @@ async with DarkPoolClient() as client:
 ```python
 # No manual 402 handling needed
 response = await client.http.get("https://api.data.com/premium")
-# If payment required → handled silently
+
 ```
 
 ###  Spending Limits
 ```python
-# Protect against runaway costs
+
 client = DarkPoolClient(
     max_spend_per_tx=5.0,    # Max $5 per transaction
     max_spend_hourly=100.0,   # Max $100 per hour
@@ -60,12 +60,12 @@ client = DarkPoolClient(
 
 ###  Dry-Run Mode
 ```python
-# Test your agent without spending real money
+
 client = DarkPoolClient(dry_run=True)
 
-# This will log the payment but not execute it
+
 response = await client.http.get("https://api.data.com/premium")
-# Raises DryRunError with payment details
+
 ```
 
 ### Pay-Protected Decorators
@@ -79,11 +79,11 @@ async def fetch_alpha_dataset():
 
 ###  Sync and Async Support
 ```python
-# Async (recommended)
+
 async with DarkPoolClient() as client:
     balance = await client.wallet.get_balance()
 
-# Sync (for legacy code)
+
 with SyncDarkPoolClient() as client:
     balance = client.wallet.get_balance()
 ```
