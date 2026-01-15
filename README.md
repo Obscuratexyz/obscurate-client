@@ -40,16 +40,16 @@ async with DarkPoolClient() as client:
 
 ---
 
-## 🎯 Features
+##  Features
 
-### ✅ Automatic x402 Payment Handling
+###  Automatic x402 Payment Handling
 ```python
 # No manual 402 handling needed
 response = await client.http.get("https://api.data.com/premium")
 # If payment required → handled silently
 ```
 
-### ✅ Spending Limits
+###  Spending Limits
 ```python
 # Protect against runaway costs
 client = DarkPoolClient(
@@ -58,7 +58,7 @@ client = DarkPoolClient(
 )
 ```
 
-### ✅ Dry-Run Mode
+###  Dry-Run Mode
 ```python
 # Test your agent without spending real money
 client = DarkPoolClient(dry_run=True)
@@ -68,7 +68,7 @@ response = await client.http.get("https://api.data.com/premium")
 # Raises DryRunError with payment details
 ```
 
-### ✅ Pay-Protected Decorators
+### Pay-Protected Decorators
 ```python
 @client.pay_protected(max_spend=10.0)
 async def fetch_alpha_dataset():
@@ -77,7 +77,7 @@ async def fetch_alpha_dataset():
     return response.json()
 ```
 
-### ✅ Sync and Async Support
+###  Sync and Async Support
 ```python
 # Async (recommended)
 async with DarkPoolClient() as client:
@@ -90,7 +90,7 @@ with SyncDarkPoolClient() as client:
 
 ---
 
-## 📖 Real-World Example: Buy a Dataset
+##  Real-World Example: Buy a Dataset
 
 ```python
 import asyncio
@@ -146,7 +146,7 @@ asyncio.run(buy_dataset())
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -176,7 +176,7 @@ client = DarkPoolClient(
 
 ---
 
-## 🛡️ Error Handling
+##  Error Handling
 
 The SDK provides typed exceptions for clean error handling:
 
@@ -216,7 +216,7 @@ async with DarkPoolClient() as client:
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -243,7 +243,7 @@ All cryptographic operations are delegated to the Privacy Sidecar.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Install dev dependencies
@@ -261,21 +261,21 @@ ruff check obscurate_client/
 
 ---
 
-## 📜 License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🔗 Links
+##  Links
 
-- **Documentation**: [docs.obscurate.xyz](https://docs.obscurate.xyz)
+
 - **GitHub**: [github.com/Obscuratexyz/obscurate-client](https://github.com/Obscuratexyz/obscurate-client)
-- **Discord**: [discord.gg/obscurate](https://discord.gg/obscurate)
+
 - **Twitter**: [@obscuratexyz](https://twitter.com/obscuratexyz)
 
 ---
 
 <p align="center">
-  <sub>Built with 🖤 by the Obscurate team</sub>
+  <sub>Built with 🐦‍⬛ by the Obscurate team</sub>
 </p>
